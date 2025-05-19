@@ -1,10 +1,15 @@
 @import url("https://fonts.cdnfonts.com/css/bauhaus-93");
 @import url("https://fonts.cdnfonts.com/css/breite-grotesk");
+html {
+  scroll-behavior: smooth;
+}
+
 .sticky {
   position: fixed;
   top: 0;
-  width: 85%;
-  margin: 2.5% 5%;
+  width: 95%;
+  border-radius: 50px;
+  margin: 2.5%;
   background: rgba(237, 237, 237, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000; /* Ensures it stays above other content */
@@ -12,15 +17,9 @@
 }
 @media (max-width: 768px) {
   .sticky {
-    width: 75%; /* Adjust width for smaller screens */
+    width: 95%; /* Adjust width for smaller screens */
     margin: 2% 2%; /* Less margin on smaller screens */
-    padding: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .sticky {
-    margin: 1% 1%; /* Further reduce margin for very small screens */
-    padding: 1rem;
+    padding: 0;
   }
 }
 
@@ -29,10 +28,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Breite Grotesk", sans-serif;
-}
-body aside {
-  background-image: url(/assets/IMG_3429.GIF);
-  object-fit: cover;
 }
 
 h1 {
@@ -47,60 +42,106 @@ p {
   font-family: "Breite Grotesk", sans-serif;
 }
 
+.svg-container, .svg-container-box svg, .svg-container-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.svg-container svg, .svg-container-box svg {
+  width: 125px; /* Adjust the width to suit your design */
+  height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0; /* Prevent the SVG from shrinking */
+  animation: hover-animation 3s infinite alternate ease-in-out;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .svg-container svg, .svg-container-box svg {
+    width: 85%;
+  }
+}
+
+.svg-container-box svg {
+  animation: none;
+}
+
+/* Ensure content remains responsive */
+.svg-container .content, .svg-container-box .content {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover effect */
+.svg-container svg:hover, .svg-container-box svg:hover {
+  transform: translateY(-10px);
+  fill: #4962f6;
+}
+
+/* Floating effect */
+@keyframes hover-animation {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+    transform: translateX(20px);
+  }
+}
 nav {
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 50px;
   display: flex;
   justify-content: space-between;
-  width: 85%;
-  margin: 2.5% auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
+  width: 100%;
+  margin-bottom: 2.5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
+  background-color: #333;
 }
-nav div ul {
+nav ul {
   display: flex;
   gap: 2rem;
+  margin-right: 2.5%;
 }
-nav div ul li {
+nav ul li {
   list-style: none;
   font-size: 1.5rem;
   font-weight: bold;
 }
-nav div ul li :hover {
-  color: #ffa588;
+nav ul li :hover {
+  color: #aab6fb;
 }
-nav div ul li a {
+nav ul li a {
   text-decoration: none;
-  color: #FF5722;
+  color: #4962f6;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
   nav {
-    background-color: #fff;
-    padding: 2.5rem;
-    border-radius: 50px;
+    background-color: #333;
     display: flex;
     justify-content: space-between;
-    width: 85%;
-    margin: 2.5% auto;
+    width: 100%;
+    margin-bottom: 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
   }
-  nav div ul {
-    display: flex;
-    gap: 1.5rem;
+  nav .cole-block {
+    display: none;
   }
-  nav div ul li {
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul li {
     list-style: none;
     font-size: 1rem;
     font-weight: bold;
   }
-  nav div ul li :hover {
-    color: #ffa588;
+  nav ul li :hover {
+    color: #aab6fb;
   }
-  nav div ul li a {
+  nav ul li a {
     text-decoration: none;
-    color: #FF5722;
+    color: #4962f6;
     font-weight: bold;
   }
 }
@@ -116,6 +157,42 @@ header .hero {
   width: 100%;
   margin: auto;
   padding: auto;
+}
+header .hero .hey-class {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 768px) {
+  header .hero .hey-class {
+    font-size: 1.25rem;
+  }
+}
+header .hero .name-class {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  color: #4962f6;
+}
+@media (max-width: 768px) {
+  header .hero .name-class {
+    font-size: 2.5rem;
+  }
+}
+header .hero .field-class {
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 768px) {
+  header .hero .field-class {
+    font-size: 1.25rem;
+  }
+}
+header .hero .future-class {
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  header .hero .future-class {
+    font-size: 1.25rem;
+  }
 }
 header .hero .hero-img {
   margin: 0;
@@ -150,6 +227,7 @@ aside {
   height: 100vh;
   width: 95%;
   margin: auto;
+  margin-bottom: 2.5%;
 }
 
 .container {
@@ -234,6 +312,95 @@ aside {
     object-fit: cover; /* Ensure it fits within small divs */
   }
 }
+.tiger {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  border-radius: 50px;
+  box-shadow: 0.5rem 0.5rem 0.1rem #333;
+  border: solid 0.25rem #333;
+}
+@media (max-width: 768px) {
+  .tiger {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: none; /* Remove shadow on smaller screens */
+  }
+}
+
+.banner {
+  margin-top: 2.5%;
+  width: 100%;
+  text-align: justify;
+}
+
+.about-cole-image {
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
+  padding: auto;
+}
+.flex-about {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  padding: auto;
+  gap: 5%;
+}
+.flex-about img {
+  border-radius: 50px;
+  border: solid 0.25rem #333;
+  margin-top: 2.5%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.socials {
+  width: 95%;
+  margin: auto;
+  padding: auto;
+}
+.socials ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 2.5%;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.socials ul li :hover {
+  color: #cccccc;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .socials ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .socials ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+.socials ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .socials ul li a {
+    padding: 0.25rem;
+  }
+}
+
 article {
   width: auto;
   background-color: #fff;
@@ -249,7 +416,7 @@ article #about-cole h1 {
 }
 @media (max-width: 768px) {
   article #about-cole h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 article #about-cole .about-cole {
@@ -263,7 +430,7 @@ article #about-cole .about-cole img {
 }
 article #about-cole .about-cole-text {
   display: flex;
-  border: 0.5rem solid #FF5722;
+  border: 0.5rem solid #4962f6;
   border-radius: 3rem;
   width: 100%;
   justify-content: space-around;
@@ -300,11 +467,19 @@ article #about-cole .about-cole-text {
 
 .window-bar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   background-color: #e0e0e0;
   padding: 10px;
   border-radius: 15px 15px 0 0;
+}
+.window-bar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.window-bar a :hover {
+  color: #4962f6;
 }
 .window-bar .dots {
   display: flex;
@@ -335,7 +510,7 @@ article #about-cole .about-cole-text {
 
 .section-title {
   font-size: 1.5em;
-  color: #FF5722;
+  color: #4962f6;
   margin-bottom: 15px;
 }
 
@@ -361,7 +536,7 @@ article #about-cole .about-cole-text {
 }
 .about-section .about-me .section-title {
   font-size: 1.7em;
-  color: #FF5722;
+  color: #4962f6;
   margin-bottom: 10px;
 }
 .about-section .about-me .section-content {
@@ -372,12 +547,25 @@ article #about-cole .about-cole-text {
   flex: 0 0 180px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .about-section .profile-picture-section {
+    width: 100%;
+  }
+}
 .about-section .profile-picture-section .profile-picture {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .about-section .profile-picture-section .profile-picture {
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+  }
 }
 
 .resume-content {
@@ -439,7 +627,6 @@ article #about-cole .about-cole-text {
   padding: 2.5%;
 }
 #work-page .work-container {
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -454,10 +641,21 @@ article #about-cole .about-cole-text {
   flex-direction: column;
   align-items: flex-start;
   padding: 2.5rem;
-  width: 30%;
+  margin-bottom: 1.25%;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
   overflow: hidden;
+  /* the below is irrelevant to the 3D effect */
+}
+#work-page .work-container .work-box .flip:hover img {
+  --_a: 0deg;
+  --_c: calc(100% - var(--y));
+}
+#work-page .work-container .work-box .flip {
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   #work-page .work-container .work-box {
@@ -472,14 +670,62 @@ article #about-cole .about-cole-text {
   width: 100%;
   height: 20rem;
   object-fit: cover;
+  border: solid 0.25rem #333;
+  border-radius: 50px;
+}
+#work-page .work-container .work-box a img:hover {
+  /* adjust the below to control the 3D effect */
+  --x: 20px;
+  --y: 20px;
+  transform: perspective(2000px) rotateX(var(--_a, 30deg));
+  transition: 1s;
+}
+#work-page .work-container .work-box a img:not(:hover) {
+  transform: perspective(2000px) rotateX(var(--_a, 0deg));
+  transition: 1s;
 }
 #work-page .work-container .work-box h2 {
   margin: 1rem 0 0.75rem;
   font-size: 1.5rem;
+  color: #4962f6;
 }
 @media (max-width: 768px) {
   #work-page .work-container .work-box h2 {
     font-family: 0.75rem;
+  }
+}
+#work-page .work-container .work-box .work-box-flex {
+  display: flex;
+  gap: 5%;
+}
+@media (max-width: 768px) {
+  #work-page .work-container .work-box .work-box-flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#work-page .work-container .work-box .work-box-text {
+  width: 45%;
+  padding: 1.5%;
+  border: solid 0.25rem #333;
+  border-radius: 50px;
+  box-shadow: 20px 20px 0px rgb(0, 0, 0);
+  background-color: #fff;
+  text-decoration: none;
+  color: #333;
+}
+#work-page .work-container .work-box .work-box-text:hover {
+  transform: scale(0.95);
+  transition: ease 0.5s;
+}
+#work-page .work-container .work-box .work-box-text:not(:hover) {
+  transform: scale(1);
+  transition: ease 0.5s;
+}
+@media (max-width: 768px) {
+  #work-page .work-container .work-box .work-box-text {
+    width: 100%;
+    margin-bottom: 25%;
   }
 }
 #work-page .work-container .work-box .skills {
@@ -489,7 +735,7 @@ article #about-cole .about-cole-text {
   margin: 0;
   gap: 1rem;
   font-weight: bold;
-  color: #FF5722;
+  color: #4962f6;
 }
 @media (max-width: 768px) {
   #work-page .work-container .work-box .skills {
@@ -497,16 +743,15 @@ article #about-cole .about-cole-text {
     font-size: 0.75rem;
   }
 }
-#work-page .work-container .work-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  border-radius: 25px;
-}
 #work-page h1 {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  #work-page h1 {
+    font-size: 2.5rem;
+  }
 }
 
 footer {
@@ -624,21 +869,67 @@ footer div {
   padding: auto;
 }
 
-.work-done-container {
+.work-done-pages {
+  background-color: #f3f3f3;
+  margin-top: 2.5%;
+}
+.work-done-pages nav {
+  background-color: #fff;
+  border-radius: 50px;
+  width: 95%;
+  margin: auto;
+}
+
+.wrap-work {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 2.5%;
+  justify-content: space-between;
+  align-items: flex-start !important;
+  width: 95%;
+  margin: auto;
+  padding: auto;
+  gap: 2.5%;
+}
+@media (max-width: 768px) {
+  .wrap-work {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 2.5%;
+  }
+}
+
+.tags {
+  border: solid 0.25rem #333;
+  box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0);
+  display: inline-block;
+  width: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+  margin: 0.5%;
+}
+
+.work-done-container {
+  margin: 2.5%;
+  padding: auto;
+  width: 95%;
 }
 .work-done-container img {
-  width: 25%;
+  width: 100%;
   height: auto;
   object-fit: cover;
+  margin: auto;
+  margin-bottom: 2.5%;
   border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.work-done-container img :hover {
+.work-done-container img:hover {
   transform: scale(1.05);
-  background-color: red;
+  transition: all 1s;
+}
+.work-done-container img:not(:hover) {
+  transform: scale(1);
+  transition: all 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -653,33 +944,47 @@ footer div {
     height: auto;
     object-fit: cover;
     border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     margin: auto;
   }
 }
 .text-section {
-  width: 85%;
+  width: 95%;
   margin: auto;
+  margin-top: 0;
+  text-align: justify;
+}
+.text-section h1 {
+  text-align: right;
+  margin-bottom: 0;
+}
+.text-section h2 {
+  text-align: right;
+  margin-top: 0;
+}
+.text-section ul {
+  padding: 0;
 }
 
 .buttons {
   display: flex;
   width: 95%;
-  justify-content: space-around;
+  gap: 2.5%;
   margin: auto;
+  align-items: center;
+}
+.buttons :hover {
+  transform: scale(1.05);
 }
 .buttons .button {
   padding: 0.5rem;
   width: 6rem;
   height: 2rem;
-  background-color: #FF5722;
+  background-color: #333;
   border-radius: 1rem;
   margin-bottom: 2.5%;
 }
-.buttons .button :hover {
-  color: #882100;
-}
-.buttons .button a {
+.buttons a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;

@@ -2,11 +2,17 @@
 @import url('https://fonts.cdnfonts.com/css/bauhaus-93');
 @import url('https://fonts.cdnfonts.com/css/breite-grotesk');
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 .sticky {
     position: fixed;
     top: 0;
-    width: 85%;
-    margin: 2.5% 5%;
+    width: 95%;
+    border-radius: 50px;
+    margin: 2.5%;
     background: rgb(237, 237, 237, .1);
     backdrop-filter: blur(10px);
     z-index: 1000; /* Ensures it stays above other content */
@@ -15,16 +21,12 @@
 
     // Add responsiveness
     @media (max-width: 768px) {
-        width: 75%; /* Adjust width for smaller screens */
+        width: 95%; /* Adjust width for smaller screens */
         margin: 2% 2%; /* Less margin on smaller screens */
-        padding: 2rem;
+        padding: 0;
     }
 
-    @media (max-width: 480px) {
-        margin: 1% 1%; /* Further reduce margin for very small screens */
-        padding: 1rem;
-        
-    }
+  
 }
 
 body{
@@ -33,14 +35,11 @@ body{
     padding: 0;
     font-family: 'Breite Grotesk', sans-serif;
     
-    aside{
-      background-image: url(/assets/IMG_3429.GIF);
-      object-fit: cover;
-    }
 }
 
 h1{
     font-family: 'Bauhaus 93', sans-serif;
+
 }
 
 h2{
@@ -52,26 +51,116 @@ p{
 
 }
 
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
 
+.svg-container-box{
+  @extend .svg-container;
+}
+
+.svg-container svg {
+  width: 125px; /* Adjust the width to suit your design */
+  height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0; /* Prevent the SVG from shrinking */
+  animation: hover-animation 3s infinite alternate ease-in-out;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 768px) {
+    width: 85%;
+}
+
+}
+
+.svg-container-box svg{
+  @extend .svg-container;
+  animation: none;
+
+}
+
+/* Ensure content remains responsive */
+.svg-container .content {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Hover effect */
+.svg-container svg:hover {
+  transform: translateY(-10px);
+  fill: $primary;
+}
+
+/* Floating effect */
+@keyframes hover-animation {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+    transform: translateX(20px);
+  }
+}
 nav{
-    background-color: #fff;
-    padding: 2.5rem;
-    border-radius: 50px;
     display: flex;
     justify-content: space-between;
-    width: 85%;
-    margin: 2.5% auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
-
-    div{
+    width: 100%;
+    margin-bottom: 2.5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
+    background-color: #333;
 
         ul{
             display: flex;
             gap: 2rem;
+            margin-right: 2.5%;
+           
             
             li{  
                 list-style: none;
                 font-size: 1.5rem;
+                font-weight: bold;
+
+                
+              
+                :hover{
+                  color: lighten($primary,20%);
+                }
+
+                a{
+                    text-decoration: none; 
+                    color: $primary;
+                    font-weight: bold;
+                   
+    
+                }
+            }
+        }
+    }
+
+
+@media (max-width: 768px) {
+  nav{
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
+
+    .cole-block{
+      display: none;
+    }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            
+            li{  
+                list-style: none;
+                font-size: 1rem;
                 font-weight: bold;
               
                 :hover{
@@ -87,47 +176,8 @@ nav{
             }
         }
     }
-    }
-
-@media (max-width: 768px) {
-    
-
-nav{
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 2.5% auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
-
-  div{
-
-      ul{
-          display: flex;
-          gap: 1.5rem;
-          
-          li{  
-              list-style: none;
-              font-size: 1rem;
-              font-weight: bold;
-            
-              :hover{
-                color: lighten($primary,20%);
-              }
-
-              a{
-                  text-decoration: none; 
-                  color: $primary;
-                  font-weight: bold;
-                  
-              }
-          }
-      }
   }
-  }
-  }
+  
 
 header{
     height: 100vh;
@@ -136,12 +186,47 @@ header{
     padding: auto;
     background-color: #f3f3f3;
     
-
     .hero{
         display: flex;
         width: 100%;
         margin: auto;
         padding: auto;
+
+        .hey-class{
+          font-size: 2rem; 
+          margin-bottom: 0.25rem;
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+          }
+        }
+
+        .name-class{
+          font-size: 3.5rem; 
+          font-weight: bold;
+          margin-top: 0.25rem; 
+          color: #4962f6;
+
+            @media (max-width: 768px) {
+              font-size: 2.5rem;
+          }
+        }
+
+        .field-class{
+          margin-bottom: 0.25rem;
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+          }
+        }
+
+        .future-class{
+          margin-top: 0;
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+          }
+        }
 
         .hero-img{
             margin: 0;
@@ -178,11 +263,11 @@ header{
     }
 }
 
-
 aside {
   height: 100vh;
   width: 95%;
   margin: auto;
+  margin-bottom: 2.5%;
 }
 
 .container {
@@ -228,6 +313,7 @@ aside {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* Media query for smaller screens */
 @media (max-width: 1350px) {
@@ -275,21 +361,121 @@ aside {
   
 }
 
+.tiger{
+  width: 95%;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  border-radius: 50px;
+  box-shadow: 0.5rem 0.5rem 0.1rem #333;
+  border: solid 0.25rem #333;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: none; /* Remove shadow on smaller screens */
+}
+}
+
+.banner{
+  margin-top: 2.5%;
+  width:100%;
+  text-align: justify;
+}
+
+.about-cole-image{
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
+  padding: auto;
+
+  img{
+    
+  }
+}
+
+.flex-about{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  padding: auto;
+  gap: 5%;
+  
+  img{
+    border-radius: 50px;
+    border: solid 0.25rem #333;
+    margin-top: 2.5%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.socials{
+  width: 95%;
+  margin: auto;
+  padding: auto;
+
+  ul{
+    
+
+    li{
+      list-style: none;
+      display: inline-block;
+      margin-right: 2.5%;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      :hover{
+        color: darken(#fff,20%);
+        transition: all 0.3s ease-in-out;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        margin-bottom: 1rem;
+        
+      }
+
+      @media screen and (max-width: 1250px) {
+        display: block;
+        margin-bottom: 1rem;
+        
+      }
+
+      a{
+        text-decoration: none; 
+        color: #333;
+        font-weight: bold;
+        padding: 0.5rem;
+        margin: auto;
+
+        @media screen and (max-width: 768px) {
+        padding: 0.25rem;
+        
+      }
+    }
+    
+  }
+  }}
+
 article{
     width: auto;
     background-color: #fff;
-   
-   
+    
     #about-cole{
         width: 85%;
         margin: auto;
         display: grid;
-
+        
         h1{
             font-size: 4rem;
 
             @media (max-width: 768px) {
-              font-size: 3rem;
+              font-size: 2.5rem;
           }
         }
 
@@ -298,7 +484,6 @@ article{
             justify-content: space-around;
             margin-bottom: 2.5%;
             
-    
             img {
                 width: 100%;
                 height: auto;
@@ -311,9 +496,7 @@ article{
             border-radius: 3rem;
             width: 100%;
             justify-content: space-around;
-            padding: 2.5% 0;
-
-            
+            padding: 2.5% 0;  
         }
 
         /* Responsive design - stack items vertically on smaller screens */
@@ -321,9 +504,6 @@ article{
             .about-cole {
                 flex-direction: column;
             }
-
-
- 
         }
     }
 }
@@ -334,8 +514,7 @@ article{
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   }
 
     .resume-wrapper:hover{
@@ -355,12 +534,22 @@ article{
   // MacOS-style window bar connected to the CV
   .window-bar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: #e0e0e0;
     padding: 10px;
     border-radius: 15px 15px 0 0;
   
+    a{
+      text-decoration: none; 
+      color: #333;
+      font-weight: bold;
+
+      :hover{
+        color: $primary;
+      }
+    }
+
     .dots {
       display: flex;
       gap: 10px;
@@ -391,11 +580,9 @@ article{
     background-color: #ffffff;
     padding: 30px;
     border-radius: 0 0 15px 15px;
-    
   }
   
   // Flexed About Me and Profile Picture section
-
   .section-title {
     font-size: 1.5em;
     color: $primary;
@@ -436,6 +623,10 @@ article{
       flex: 0 0 180px;  // Set a fixed width for the profile picture section
       text-align: center;
   
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
       .profile-picture {
         width: 180px;
         height: 180px;
@@ -443,7 +634,13 @@ article{
         border-radius: 50%;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-        
+        @media (max-width: 768px) {
+          width: 75%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 50px;
+
+      }
       }
     }
   }
@@ -520,7 +717,6 @@ article{
     padding: 2.5%;
     
     .work-container {
-        display: flex;
         justify-content: space-between; // Evenly space the frames
         flex-wrap: wrap; // Allow wrapping on smaller screens
 
@@ -535,11 +731,23 @@ article{
             flex-direction: column; // Stack items vertically
             align-items: flex-start; // Align items to the start
             padding: 2.5rem;
-            width: 30%; // Adjust width for three items next to each other
+            margin-bottom: 1.25%;
+            width: 100%; // Adjust width for three items next to each other
+            height: 100%;
             box-sizing: border-box; // Ensure padding is included in the width
-            transition: transform 0.3s; // Add transition for hover effect
+            transition: transform 0.3s ease-in-out;
+            transform-style: preserve-3d;
             overflow: hidden;
-
+          
+            .flip:hover img {
+              --_a: 0deg;
+              --_c: calc(100% - var(--y));
+            }
+            
+            /* the below is irrelevant to the 3D effect */
+            .flip {
+              cursor: pointer;
+            }
             @media (max-width: 768px) {
               width: 90%;
             }
@@ -552,16 +760,71 @@ article{
                     width: 100%; // Stretch to fill the width
                     height: 20rem; // Fixed height for square
                     object-fit: cover; // Ensure the image covers the frame without distortion
+                    border: solid 0.25rem #333;
+                    border-radius: 50px;
+                    
+                    &:hover {
+                      /* adjust the below to control the 3D effect */
+                      --x: 20px;
+                      --y: 20px;
+                      transform: perspective(2000px) rotateX(var(--_a, 30deg));          
+                      transition: 1s;
+                    }
+                      &:not(:hover){
+                        transform: perspective(2000px) rotateX(var(--_a, 0deg));  
+                        transition: 1s;
+                      }
+
+                 
                 }
             }
 
             h2 {
                 margin: 1rem 0 0.75rem; // Spacing between image and heading
                 font-size: 1.5rem; // Adjust size as needed
+                color: $primary;
 
                 @media (max-width: 768px) {
                   font-family: 0.75rem;
                 }
+            }
+
+            
+            .work-box-flex{
+              display: flex;
+              gap: 5%;
+
+              @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+
+            .work-box-text{
+              width: 45%;
+              padding: 1.5%;
+              border: solid 0.25rem #333;
+              border-radius: 50px;
+              box-shadow: 20px 20px 0px rgba(0, 0, 0);
+              background-color: #fff;
+              text-decoration: none; 
+              color: #333;
+
+
+              &:hover{
+                transform: scale(.95);
+                transition: ease 0.5s;
+              }
+              &:not(:hover){
+                transform: scale(1);
+                transition: ease 0.5s;
+              }
+
+              @media (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 25%;
+                
+              }
             }
 
             .skills {
@@ -580,12 +843,7 @@ article{
             }
 
             // Hover effect for the work box
-            &:hover {
-                transform: scale(1.05); // Slightly enlarge the box on hover
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); // Add shadow for depth
-                font-weight: bold;
-                border-radius: 25px;
-            }
+           
         }
     }
 
@@ -593,6 +851,10 @@ article{
         text-align: center;
         font-size: 3.5rem;
         margin-bottom: 2rem; // Add spacing below main heading
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
     }
 
 
@@ -722,22 +984,69 @@ footer {
 }
 
 // Work DONE PAGES
-.work-done-container{
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2.5%;
+.work-done-pages{
+  background-color: #f3f3f3;
+  margin-top: 2.5%;
   
+  nav{
+    background-color: #fff;
+    border-radius: 50px;
+    width: 95%;
+    margin: auto;
+  }
+}
+
+.wrap-work{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start !important;
+  width: 95%;
+  margin: auto;
+  padding: auto;
+  gap: 2.5%;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 2.5%;
+  }
+}
+
+.tags{
+  border: solid 0.25rem #333;
+  box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0); 
+  display: inline-block;
+  width: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+  margin: 0.5%;
+}
+
+
+.work-done-container{
+  margin: 2.5%;
+  padding: auto;
+  width: 95%;
 
   img{
-    width: 25%;
+    width: 100%;
     height: auto;
     object-fit: cover;
+    margin: auto;
+    margin-bottom:2.5%;
     border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-    :hover{
+    &:hover{
       transform: scale(1.05);
-      background-color: red;
+      transition: all 1s;
+    }
+
+    &:not(:hover){
+      transform: scale(1);
+      transition: all 0.5s;
     }
   }
 
@@ -755,7 +1064,7 @@ footer {
       height: auto;
       object-fit: cover;
       border-radius: 25px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
       margin: auto;
   
     }
@@ -763,34 +1072,57 @@ footer {
   }
 }
 
+
+
 .text-section{
-  width: 85%;
+  width: 95%;
   margin: auto;
+  margin-top: 0;
+  text-align: justify;
+  
+  h1{
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  h2{
+    text-align: right;
+    margin-top: 0;
+  }
+
+  ul{
+    padding: 0;
+  }
 }
 .buttons{
   display: flex;
   width: 95%;
-  justify-content: space-around;
+  gap: 2.5%;
   margin: auto;
-  
- 
+  align-items: center;
+
+  :hover{
+    transform: scale(1.05);
+  }
+
   .button{
     padding: 0.5rem;
     width: 6rem;
     height: 2rem;
-    background-color: $primary;
+    background-color: #333;
     border-radius: 1rem;
     margin-bottom: 2.5%;
-
-    :hover{
-      color: darken($primary,30%);
     }
-    
-      a{
-          text-decoration: none; 
-          color: #fff;
-          font-weight: bold;
-          
-      }
+
+  a{
+    text-decoration: none; 
+    color: #fff;
+    font-weight: bold;
   }
-}
+    
+
+  }
+
+
+
+
