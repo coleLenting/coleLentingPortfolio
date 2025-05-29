@@ -371,9 +371,13 @@ aside {
   margin-right: 2.5%;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
+  background-color: #4962f6;
+  border-radius: 50px;
 }
 .socials ul li :hover {
-  color: #cccccc;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 768px) {
@@ -390,7 +394,7 @@ aside {
 }
 .socials ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: bold;
   padding: 0.5rem;
   margin: auto;
@@ -451,7 +455,7 @@ article #about-cole .about-cole-text {
 }
 
 .resume-wrapper:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   transition: all 1.2s;
 }
 @media (max-width: 768px) {
@@ -756,18 +760,12 @@ article #about-cole .about-cole-text {
 
 footer {
   display: flex;
-  background-image: url("/assets/giphy.gif");
-  background-size: cover;
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
   background-color: #333;
   color: #fff;
 }
-footer div {
-  width: 50%;
-}
-
 .contact-form {
   width: 95%;
   padding: 1.25rem;

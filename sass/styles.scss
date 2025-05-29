@@ -428,9 +428,13 @@ aside {
       margin-right: 2.5%;
       font-size: 1rem;
       transition: all 0.3s ease-in-out;
+      background-color: $primary;
+      border-radius: 50px;
 
       :hover{
-        color: darken(#fff,20%);
+        color: #fff;
+        background-color: #333;
+        border-radius: 50px;
         transition: all 0.3s ease-in-out;
       }
 
@@ -448,10 +452,11 @@ aside {
 
       a{
         text-decoration: none; 
-        color: #333;
+        color: #fff;
         font-weight: bold;
         padding: 0.5rem;
         margin: auto;
+        
 
         @media screen and (max-width: 768px) {
         padding: 0.25rem;
@@ -518,7 +523,7 @@ article{
   }
 
     .resume-wrapper:hover{
-      transform: scale(1.05);
+      transform: scale(1.01);
       transition: all 1.2s;
 
       @media (max-width: 768px) {
@@ -861,8 +866,6 @@ article{
 }
 footer {
   display: flex;
-  background-image: url("/assets/giphy.gif");
-  background-size: cover;
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
@@ -870,7 +873,7 @@ footer {
   color: #fff;
 
   div {
-      width: 50%;
+    
   }
 }
 
