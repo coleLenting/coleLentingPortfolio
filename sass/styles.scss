@@ -17,6 +17,10 @@ html{
     backdrop-filter: blur(10px);
     z-index: 1000; /* Ensures it stays above other content */
     transition: top 0.5s ease; /* Ease in transition */
+
+    @media (prefers-color-scheme: dark) {
+        background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+    }
     
 
     // Add responsiveness
@@ -34,7 +38,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Breite Grotesk', sans-serif;
-    
+
 }
 
 h1{
@@ -108,9 +112,8 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 2.5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
-    background-color: #333;
+    
 
         ul{
             display: flex;
@@ -384,7 +387,10 @@ aside {
   width:100%;
   text-align: justify;
 }
-
+.about{
+  margin-top: 2.5%;
+   margin-bottom: 2.5%;
+}
 .about-cole-image{
   width: 100%;
   object-fit: cover;
@@ -649,7 +655,6 @@ article{
       }
     }
   }
-  
   .resume-content {
     width: 100%;
   
@@ -989,14 +994,7 @@ footer {
 // Work DONE PAGES
 .work-done-pages{
   background-color: #f3f3f3;
-  margin-top: 2.5%;
-  
-  nav{
-    background-color: #fff;
-    border-radius: 50px;
-    width: 95%;
-    margin: auto;
-  }
+
 }
 
 .wrap-work{
@@ -1127,5 +1125,84 @@ footer {
   }
 
 
+@media (prefers-color-scheme: dark) {
+  body, .hero, footer, .container,
+  .resume-wrapper{
+    background-color: #181818 !important;
+    color: #f3f3f3;
+  }
+  article,
+  section,
+  .work-container,
+  .about-section,
+  .work-box-text,
+  .contact-form,
+  .window-bar,
+  .resume-layout,
+  .tags {
+    background-color: #222 !important;
+    color: #f3f3f3 !important;
+    border-color: #444 !important;
+  }
+  h1, h2, h3, h4, h5, h6, p, a, .section-title {
+    color: #f3f3f3 !important;
+  }
+  .button, .socials li {
+    background-color: #444 !important;
+    color: #fff !important;
+  }
+  .work-box-text, .tags {
+    background-color: #222 !important;
+    color: #f3f3f3 !important;
+    border-color: #444 !important;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    background-color: #181818;
+    color: #f3f3f3;
+    border-bottom: 2px solid #888;
+  }
+  .contact-form button {
+    background-color: #444;
+    color: #fff;
+  }
+  .contact-form button:hover {
+    background-color: #666;
+  }
+  .icon {
+    color: #f3f3f3;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .resume-wrapper,
+  .resume-layout,
+  .about-section,
+  .window-bar,
+  .section,
+  .software-skills {
+    background-color: #222 !important;
+    color: #f3f3f3 !important;
+    border-color: #444 !important;
+  }
+  .section-title,
+  .section-content,
+  .list-item,
+  .skill-name {
+    color: #f3f3f3 !important;
+  }
+  .window-bar {
+    background-color: #181818 !important;
+  }
+  .progress-bar {
+    background: #333 !important;
+  }
+  .progress {
+    background: #4962f6 !important;
+  }
+  .dot.red { background: #ff5f56; }
+  .dot.yellow { background: #ffbd2e; }
+  .dot.green { background: #27c93f; }
+}
 
 
