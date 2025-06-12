@@ -7,9 +7,11 @@ html {
 .sticky {
   position: fixed;
   top: 0;
-  width: 95%;
+  width: 75%;
+  height: 10%;
   border-radius: 50px;
-  margin: 2.5%;
+  margin: 12.5%;
+  margin-top: 0.5%;
   background: rgba(237, 237, 237, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000; /* Ensures it stays above other content */
@@ -17,7 +19,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .sticky {
-    background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+    background: rgba(30, 30, 30, 0.8) !important; /* Dark mode background */
   }
 }
 @media (max-width: 768px) {
@@ -32,7 +34,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Roboto";
 }
 
 h1 {
@@ -51,6 +53,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 95%;
 }
 
 .svg-container svg, .svg-container-box svg {
@@ -86,11 +89,11 @@ p {
 /* Floating effect */
 @keyframes hover-animation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   100% {
-    transform: translateY(-20px);
-    transform: translateX(20px);
+    transform: translateY(-15px);
+    transform: translateX(15px);
   }
 }
 nav {
@@ -319,19 +322,20 @@ aside {
   }
 }
 .tiger {
-  color: #fff;
+  color: #333;
   width: 95%;
-  height: auto;
-  margin: auto;
-  padding: auto;
+  height: 90%;
+  margin: 2.5% auto;
+  padding: 1%;
   border-radius: 50px;
-  background: rgba(237, 237, 237, 0.01);
+  background-color: #fff;
   backdrop-filter: blur(10px);
-  box-shadow: 0.5rem 0.5rem 0.1rem rgba(237, 237, 237, 0.01);
+  box-shadow: 1rem 1rem 0.9rem rgba(237, 237, 237, 0.1);
 }
 @media (prefers-color-scheme: dark) {
   .tiger {
-    background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+    background-color: rgba(30, 30, 30, 0.8) !important; /* Dark mode background */
+    box-shadow: 1rem 1rem 0.9rem rgb(30, 30, 30) !important;
   }
 }
 @media (max-width: 768px) {
@@ -370,12 +374,11 @@ aside {
   gap: 5%;
 }
 .flex-about img {
-  border-radius: 50px;
-  border: solid 0.25rem #333;
-  margin-top: 2.5%;
-  object-fit: cover;
+  height: 100%;
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .socials {
@@ -425,8 +428,16 @@ aside {
 
 article {
   width: auto;
-  background-color: #fff;
-  background-image: url("../../assets/lain-code.jpg");
+  padding: 2.5%;
+  margin: auto;
+  height: 100vh;
+  background-color: #f3f3f3;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  article {
+    box-shadow: 0px 4px 50px rgba(30, 30, 30, 0.8) !important;
+  }
 }
 article #about-cole {
   width: 85%;
@@ -646,12 +657,22 @@ article #about-cole .about-cole-text {
 
 #work-page {
   margin-top: 2.5%;
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 2.5%;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page {
+    background-color: #181818 !important;
+  }
 }
 #work-page .work-container {
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page .work-container {
+    background-color: #181818 !important;
+  }
 }
 @media (max-width: 768px) {
   #work-page .work-container {
@@ -733,12 +754,18 @@ article #about-cole .about-cole-text {
 #work-page .work-container .work-box .work-box-text {
   width: 45%;
   padding: 1.5%;
-  border: solid 0.25rem #333;
+  border: solid 0.25rem rgba(248, 249, 250, 0.7254901961);
   border-radius: 50px;
-  box-shadow: 20px 20px 0px rgb(0, 0, 0);
+  box-shadow: 20px 20px 0px rgba(243, 243, 243, 0.9333333333);
   background-color: #fff;
   text-decoration: none;
   color: #333;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page .work-container .work-box .work-box-text {
+    box-shadow: 20px 20px 0px #111 !important;
+    border: solid 0.25rem #333 !important;
+  }
 }
 #work-page .work-container .work-box .work-box-text:hover {
   transform: scale(0.95);
@@ -785,8 +812,9 @@ footer {
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #f3f3f3;
+  color: #333;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .contact-form {
   width: 95%;
@@ -887,6 +915,10 @@ footer {
   height: auto;
   margin: auto;
   padding: auto;
+}
+
+#work-page h1 {
+  color: #333;
 }
 
 .work-done-pages {
