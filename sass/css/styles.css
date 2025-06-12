@@ -426,7 +426,7 @@ aside {
 article {
   width: auto;
   background-color: #fff;
-  background-image: url("/assets/lain-code.jpg");
+  background-image: url("./assets/lain-code.jpg");
 }
 article #about-cole {
   width: 85%;
@@ -785,9 +785,8 @@ footer {
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
-  background-color: #f3f3f3;
-  color: #333;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+  color: #fff;
 }
 .contact-form {
   width: 95%;
