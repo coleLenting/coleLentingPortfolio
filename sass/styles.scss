@@ -1,6 +1,6 @@
 @import 'vars';
 @import url('https://fonts.cdnfonts.com/css/bauhaus-93');
-@import url('https://fonts.cdnfonts.com/css/breite-grotesk');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html{
   scroll-behavior: smooth;
@@ -47,11 +47,11 @@ h1{
 }
 
 h2{
-    font-family: 'Breite Grotesk', sans-serif;
+    font-family: 'Bricolage Grotesque';
 }
 
 p{
-  font-family: 'Breite Grotesk', sans-serif;
+  font-family: 'Roboto';
 
 }
 
@@ -187,7 +187,7 @@ header{
     width:100%;
     margin: auto;
     padding: auto;
-    background-color: #f3f3f3;
+    background-color: #fff;
     
     .hero{
         display: flex;
@@ -217,14 +217,16 @@ header{
 
         .field-class{
           margin-bottom: 0.25rem;
+          color: #333333c0;
 
           @media (max-width: 768px) {
-            font-size: 1.25rem;
+            font-size: 10%;
           }
         }
 
         .future-class{
           margin-top: 0;
+          color: #333333c0;
 
           @media (max-width: 768px) {
             font-size: 1.25rem;
@@ -253,6 +255,7 @@ header{
             margin: auto;
             padding: auto;
             font-size: 2.5rem;
+            color: #333;
 
 
             h2{
@@ -365,13 +368,20 @@ aside {
 }
 
 .tiger{
+  color: #fff;
   width: 95%;
   height: auto;
   margin: auto;
   padding: auto;
   border-radius: 50px;
-  box-shadow: 0.5rem 0.5rem 0.1rem #333;
-  border: solid 0.25rem #333;
+  background: rgb(237, 237, 237, .01);
+  backdrop-filter: blur(10px);
+  box-shadow: 0.5rem 0.5rem 0.1rem rgb(237, 237, 237, .01);
+
+  @media (prefers-color-scheme: dark) {
+        background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+    }
+  
   
   @media (max-width: 768px) {
     width: 100%;
@@ -476,6 +486,7 @@ aside {
 article{
     width: auto;
     background-color: #fff;
+    background-image: url('/assets/lain-code.jpg');
     
     #about-cole{
         width: 85%;
@@ -803,10 +814,17 @@ article{
             .work-box-flex{
               display: flex;
               gap: 5%;
+              
+              
 
               @media (max-width: 768px) {
                 display: flex;
                 flex-direction: column;
+
+
+                h2,p {
+                margin: 5%;
+              }
               }
             }
 
@@ -1131,6 +1149,7 @@ footer {
     background-color: #181818 !important;
     color: #f3f3f3;
   }
+
   article,
   section,
   .work-container,

@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/bauhaus-93");
-@import url("https://fonts.cdnfonts.com/css/breite-grotesk");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -40,11 +40,11 @@ h1 {
 }
 
 h2 {
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Bricolage Grotesque";
 }
 
 p {
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Roboto";
 }
 
 .svg-container, .svg-container-box svg, .svg-container-box {
@@ -153,7 +153,7 @@ header {
   width: 100%;
   margin: auto;
   padding: auto;
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 header .hero {
   display: flex;
@@ -183,14 +183,16 @@ header .hero .name-class {
 }
 header .hero .field-class {
   margin-bottom: 0.25rem;
+  color: rgba(51, 51, 51, 0.7529411765);
 }
 @media (max-width: 768px) {
   header .hero .field-class {
-    font-size: 1.25rem;
+    font-size: 10%;
   }
 }
 header .hero .future-class {
   margin-top: 0;
+  color: rgba(51, 51, 51, 0.7529411765);
 }
 @media (max-width: 768px) {
   header .hero .future-class {
@@ -216,6 +218,7 @@ header .hero .hero-text {
   margin: auto;
   padding: auto;
   font-size: 2.5rem;
+  color: #333;
 }
 header .hero .hero-text h2 {
   font-size: 2.5rem;
@@ -316,13 +319,20 @@ aside {
   }
 }
 .tiger {
+  color: #fff;
   width: 95%;
   height: auto;
   margin: auto;
   padding: auto;
   border-radius: 50px;
-  box-shadow: 0.5rem 0.5rem 0.1rem #333;
-  border: solid 0.25rem #333;
+  background: rgba(237, 237, 237, 0.01);
+  backdrop-filter: blur(10px);
+  box-shadow: 0.5rem 0.5rem 0.1rem rgba(237, 237, 237, 0.01);
+}
+@media (prefers-color-scheme: dark) {
+  .tiger {
+    background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+  }
 }
 @media (max-width: 768px) {
   .tiger {
@@ -416,6 +426,7 @@ aside {
 article {
   width: auto;
   background-color: #fff;
+  background-image: url("/assets/lain-code.jpg");
 }
 article #about-cole {
   width: 85%;
@@ -715,6 +726,9 @@ article #about-cole .about-cole-text {
     display: flex;
     flex-direction: column;
   }
+  #work-page .work-container .work-box .work-box-flex h2, #work-page .work-container .work-box .work-box-flex p {
+    margin: 5%;
+  }
 }
 #work-page .work-container .work-box .work-box-text {
   width: 45%;
@@ -771,8 +785,9 @@ footer {
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #f3f3f3;
+  color: #333;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .contact-form {
   width: 95%;
