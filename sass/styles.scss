@@ -12,7 +12,7 @@ html{
     top: 0;
     width: 75%;
     height: 10%;
-    border-radius: 50px;
+    border-radius: 25px;
     margin: 12.5%;
     margin-top: 0.5%;
     background: rgb(237, 237, 237, 0.1);
@@ -375,7 +375,7 @@ aside {
   width: 95%;
   height: 90%;
   margin: 2.5% auto;
-  padding: 1%;
+  padding:0;
   border-radius: 50px;
   background-color: #fff;
   backdrop-filter: blur(10px);
@@ -388,7 +388,7 @@ aside {
   
   @media (max-width: 768px) {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 50px;
     box-shadow: none; /* Remove shadow on smaller screens */
@@ -397,6 +397,7 @@ aside {
 
 .banner{
   margin-top: 2.5%;
+  margin-left: 2.5%;
   width:100%;
   text-align: justify;
 }
@@ -406,36 +407,40 @@ aside {
 }
 .about-cole-image{
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
 
     img{
+      
         }
   }
 
 .flex-about{
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   padding: auto;
   gap: 5%;
   
-  img{
+  .lain-img{
       height: 100%;
       width: 100%;
       object-fit:cover;
       -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
       mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-                
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;     
             
   }
 }
 
 .socials{
   width: 95%;
-  margin: auto;
+  margin: 2.5% auto;
   padding: auto;
 
   ul{
@@ -444,16 +449,12 @@ aside {
     li{
       list-style: none;
       display: inline-block;
-      margin-right: 2.5%;
-      font-size: 1rem;
       transition: all 0.3s ease-in-out;
-      background-color: $primary;
-      border-radius: 50px;
+      width: 20%;
+      
 
       :hover{
-        color: #fff;
-        background-color: #333;
-        border-radius: 50px;
+        transform: scale(1.1);
         transition: all 0.3s ease-in-out;
       }
 
@@ -480,6 +481,11 @@ aside {
         @media screen and (max-width: 768px) {
         padding: 0.25rem;
         
+      }
+
+      img{
+        width: 80%;
+        height: auto;
       }
     }
     
