@@ -123,7 +123,6 @@ nav ul li a {
 
 @media (max-width: 768px) {
   nav {
-    background-color: #333;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -354,6 +353,17 @@ aside {
   width: 100%;
   text-align: justify;
 }
+@media (max-width: 768px) {
+  .banner {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cole-text-2 {
+    display: none;
+  }
+}
 
 .about {
   margin-top: 2.5%;
@@ -388,29 +398,39 @@ aside {
 
 .socials {
   width: 95%;
-  margin: 2.5% auto;
+  height: auto;
+  padding: auto;
+}
+.socials ul {
+  margin: 2.5%;
   padding: auto;
 }
 .socials ul li {
   list-style: none;
   display: inline-block;
   transition: all 0.3s ease-in-out;
-  width: 20%;
+  width: 23.75%;
+  text-align: center;
+  margin-top: 2.5%;
 }
 .socials ul li :hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(7px 7px 25px rgb(196, 193, 193));
+}
+.socials ul li :not(:hover) {
+  transform: scale(1);
+  transition: ease 0.5s;
 }
 @media screen and (max-width: 768px) {
   .socials ul li {
-    display: block;
-    margin-bottom: 1rem;
+    width: 47.5%;
+    margin-bottom: 0.5rem;
   }
 }
 @media screen and (max-width: 1250px) {
   .socials ul li {
-    display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 .socials ul li a {
@@ -426,7 +446,7 @@ aside {
   }
 }
 .socials ul li a img {
-  width: 80%;
+  width: 45%;
   height: auto;
 }
 
@@ -804,6 +824,7 @@ article #about-cole .about-cole-text {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
 }
 @media (max-width: 768px) {
   #work-page h1 {
@@ -948,7 +969,7 @@ footer {
 }
 
 .tags {
-  border: solid 0.25rem #333;
+  border: solid 0.25rem #222;
   box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0);
   display: inline-block;
   width: auto;
@@ -1024,12 +1045,18 @@ footer {
 }
 .buttons :hover {
   transform: scale(1.05);
+  transition: all 0.5s;
+  color: #4962f6;
+}
+.buttons :not(:hover) {
+  transform: scale(1);
+  transition: all 0.5s;
 }
 .buttons .button {
   padding: 0.5rem;
   width: 6rem;
   height: 2rem;
-  background-color: #333;
+  background-color: #222;
   border-radius: 1rem;
   margin-bottom: 2.5%;
 }
@@ -1044,6 +1071,9 @@ footer {
   .resume-wrapper {
     background-color: #181818 !important;
     color: #f3f3f3;
+  }
+  .button {
+    background-color: #333 !important;
   }
   article,
   section,
@@ -1062,8 +1092,11 @@ footer {
     color: #f3f3f3 !important;
   }
   .button, .socials li {
-    background-color: #444 !important;
     color: #fff !important;
+  }
+  .socials li img {
+    filter: invert(100%) !important;
+    -webkit-filter: invert(100%) !important;
   }
   .work-box-text, .tags {
     background-color: #222 !important;

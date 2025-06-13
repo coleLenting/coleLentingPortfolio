@@ -149,7 +149,6 @@ nav{
 
 @media (max-width: 768px) {
   nav{
-    background-color: #333;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -400,7 +399,18 @@ aside {
   margin-left: 2.5%;
   width:100%;
   text-align: justify;
+
+  @media(max-width: 768px){
+    text-align: center;
+  }
 }
+
+.about-cole-text-2{
+  @media (max-width: 768px) {
+    display: none;
+}
+}
+
 .about{
   margin-top: 2.5%;
    margin-bottom: 2.5%;
@@ -440,33 +450,41 @@ aside {
 
 .socials{
   width: 95%;
-  margin: 2.5% auto;
+  height: auto;
   padding: auto;
 
   ul{
-    
+    margin: 2.5%;
+    padding: auto;
 
     li{
       list-style: none;
       display: inline-block;
       transition: all 0.3s ease-in-out;
-      width: 20%;
-      
-
+      width: calc(95% / 4);
+      text-align: center;
+      margin-top: 2.5%;
+  
       :hover{
         transform: scale(1.1);
         transition: all 0.3s ease-in-out;
+       filter: drop-shadow(7px 7px 25px rgb(196, 193, 193));
       }
 
+      :not(:hover){
+                transform: scale(1);
+                transition: ease 0.5s;
+              }
+
+
       @media screen and (max-width: 768px) {
-        display: block;
-        margin-bottom: 1rem;
+        width: calc(95% / 2);
+        margin-bottom: 0.5rem;
         
       }
 
       @media screen and (max-width: 1250px) {
-        display: block;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         
       }
 
@@ -484,7 +502,7 @@ aside {
       }
 
       img{
-        width: 80%;
+        width: 45%;
         height: auto;
       }
     }
@@ -907,6 +925,7 @@ article{
         text-align: center;
         font-size: 3.5rem;
         margin-bottom: 2rem; // Add spacing below main heading
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1)); // Add a subtle shadow for depth
 
         @media (max-width: 768px) {
           font-size: 2.5rem;
@@ -1069,7 +1088,7 @@ footer {
 }
 
 .tags{
-  border: solid 0.25rem #333;
+  border: solid 0.25rem #222;
   box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0); 
   display: inline-block;
   width: auto;
@@ -1127,8 +1146,6 @@ footer {
   }
 }
 
-
-
 .text-section{
   width: 95%;
   margin: auto;
@@ -1158,13 +1175,20 @@ footer {
 
   :hover{
     transform: scale(1.05);
+    transition: all 0.5s;
+    color: $primary;
+  }
+
+  :not(:hover){
+    transform: scale(1);
+    transition: all 0.5s;
   }
 
   .button{
     padding: 0.5rem;
     width: 6rem;
     height: 2rem;
-    background-color: #333;
+    background-color: #222;
     border-radius: 1rem;
     margin-bottom: 2.5%;
     }
@@ -1186,6 +1210,10 @@ footer {
     color: #f3f3f3;
   }
 
+  .button{
+    background-color: #333!important;
+  }
+
   article,
   section,
   .work-container,
@@ -1203,9 +1231,13 @@ footer {
     color: #f3f3f3 !important;
   }
   .button, .socials li {
-    background-color: #444 !important;
     color: #fff !important;
   }
+
+.socials li img{
+    filter: invert(100%)!important;
+    -webkit-filter: invert(100%)!important;
+}
   .work-box-text, .tags {
     background-color: #222 !important;
     color: #f3f3f3 !important;
