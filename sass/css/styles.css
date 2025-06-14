@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/bauhaus-93");
-@import url("https://fonts.cdnfonts.com/css/breite-grotesk");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -7,9 +7,11 @@ html {
 .sticky {
   position: fixed;
   top: 0;
-  width: 95%;
-  border-radius: 50px;
-  margin: 2.5%;
+  width: 75%;
+  height: 10%;
+  border-radius: 25px;
+  margin: 12.5%;
+  margin-top: 0.5%;
   background: rgba(237, 237, 237, 0.1);
   backdrop-filter: blur(10px);
   z-index: 1000; /* Ensures it stays above other content */
@@ -17,7 +19,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   .sticky {
-    background: rgba(30, 30, 30, 0.8); /* Dark mode background */
+    background: rgba(30, 30, 30, 0.8) !important; /* Dark mode background */
   }
 }
 @media (max-width: 768px) {
@@ -32,7 +34,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Roboto";
 }
 
 h1 {
@@ -40,17 +42,18 @@ h1 {
 }
 
 h2 {
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Bricolage Grotesque";
 }
 
 p {
-  font-family: "Breite Grotesk", sans-serif;
+  font-family: "Roboto";
 }
 
 .svg-container, .svg-container-box svg, .svg-container-box {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 95%;
 }
 
 .svg-container svg, .svg-container-box svg {
@@ -86,11 +89,11 @@ p {
 /* Floating effect */
 @keyframes hover-animation {
   0% {
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   100% {
-    transform: translateY(-20px);
-    transform: translateX(20px);
+    transform: translateY(-15px);
+    transform: translateX(15px);
   }
 }
 nav {
@@ -120,7 +123,6 @@ nav ul li a {
 
 @media (max-width: 768px) {
   nav {
-    background-color: #333;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -153,7 +155,7 @@ header {
   width: 100%;
   margin: auto;
   padding: auto;
-  background-color: #f3f3f3;
+  background-color: #fff;
 }
 header .hero {
   display: flex;
@@ -183,14 +185,16 @@ header .hero .name-class {
 }
 header .hero .field-class {
   margin-bottom: 0.25rem;
+  color: rgba(51, 51, 51, 0.7529411765);
 }
 @media (max-width: 768px) {
   header .hero .field-class {
-    font-size: 1.25rem;
+    font-size: 10%;
   }
 }
 header .hero .future-class {
   margin-top: 0;
+  color: rgba(51, 51, 51, 0.7529411765);
 }
 @media (max-width: 768px) {
   header .hero .future-class {
@@ -216,6 +220,7 @@ header .hero .hero-text {
   margin: auto;
   padding: auto;
   font-size: 2.5rem;
+  color: #333;
 }
 header .hero .hero-text h2 {
   font-size: 2.5rem;
@@ -316,18 +321,26 @@ aside {
   }
 }
 .tiger {
+  color: #333;
   width: 95%;
-  height: auto;
-  margin: auto;
-  padding: auto;
+  height: 90%;
+  margin: 2.5% auto;
+  padding: 0;
   border-radius: 50px;
-  box-shadow: 0.5rem 0.5rem 0.1rem #333;
-  border: solid 0.25rem #333;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 1rem 1rem 0.9rem rgba(237, 237, 237, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  .tiger {
+    background-color: rgba(30, 30, 30, 0.8) !important; /* Dark mode background */
+    box-shadow: 1rem 1rem 0.9rem rgb(30, 30, 30) !important;
+  }
 }
 @media (max-width: 768px) {
   .tiger {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 50px;
     box-shadow: none; /* Remove shadow on smaller screens */
@@ -336,8 +349,20 @@ aside {
 
 .banner {
   margin-top: 2.5%;
+  margin-left: 2.5%;
   width: 100%;
   text-align: justify;
+}
+@media (max-width: 768px) {
+  .banner {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-cole-text-2 {
+    display: none;
+  }
 }
 
 .about {
@@ -347,57 +372,65 @@ aside {
 
 .about-cole-image {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
 }
 .flex-about {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   padding: auto;
   gap: 5%;
 }
-.flex-about img {
-  border-radius: 50px;
-  border: solid 0.25rem #333;
-  margin-top: 2.5%;
-  object-fit: cover;
+.flex-about .lain-img {
+  height: 100%;
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .socials {
   width: 95%;
-  margin: auto;
+  height: auto;
+  padding: auto;
+}
+.socials ul {
+  margin: 2.5%;
   padding: auto;
 }
 .socials ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 2.5%;
-  font-size: 1rem;
   transition: all 0.3s ease-in-out;
-  background-color: #4962f6;
-  border-radius: 50px;
+  width: 23.75%;
+  text-align: center;
+  margin-top: 2.5%;
 }
 .socials ul li :hover {
-  color: #fff;
-  background-color: #333;
-  border-radius: 50px;
+  transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(7px 7px 25px rgb(196, 193, 193));
+}
+.socials ul li :not(:hover) {
+  transform: scale(1);
+  transition: ease 0.5s;
 }
 @media screen and (max-width: 768px) {
   .socials ul li {
-    display: block;
-    margin-bottom: 1rem;
+    width: 47.5%;
+    margin-bottom: 0.5rem;
   }
 }
 @media screen and (max-width: 1250px) {
   .socials ul li {
-    display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 .socials ul li a {
@@ -412,10 +445,23 @@ aside {
     padding: 0.25rem;
   }
 }
+.socials ul li a img {
+  width: 45%;
+  height: auto;
+}
 
 article {
   width: auto;
-  background-color: #fff;
+  padding: 2.5%;
+  margin: auto;
+  height: 100vh;
+  background-color: #f3f3f3;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  article {
+    box-shadow: 0px 4px 50px rgba(30, 30, 30, 0.8) !important;
+  }
 }
 article #about-cole {
   width: 85%;
@@ -635,12 +681,22 @@ article #about-cole .about-cole-text {
 
 #work-page {
   margin-top: 2.5%;
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 2.5%;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page {
+    background-color: #181818 !important;
+  }
 }
 #work-page .work-container {
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page .work-container {
+    background-color: #181818 !important;
+  }
 }
 @media (max-width: 768px) {
   #work-page .work-container {
@@ -715,16 +771,25 @@ article #about-cole .about-cole-text {
     display: flex;
     flex-direction: column;
   }
+  #work-page .work-container .work-box .work-box-flex h2, #work-page .work-container .work-box .work-box-flex p {
+    margin: 5%;
+  }
 }
 #work-page .work-container .work-box .work-box-text {
   width: 45%;
   padding: 1.5%;
-  border: solid 0.25rem #333;
+  border: solid 0.25rem rgba(248, 249, 250, 0.7254901961);
   border-radius: 50px;
-  box-shadow: 20px 20px 0px rgb(0, 0, 0);
+  box-shadow: 20px 20px 0px rgba(243, 243, 243, 0.9333333333);
   background-color: #fff;
   text-decoration: none;
   color: #333;
+}
+@media (prefers-color-scheme: dark) {
+  #work-page .work-container .work-box .work-box-text {
+    box-shadow: 20px 20px 0px #111 !important;
+    border: solid 0.25rem #333 !important;
+  }
 }
 #work-page .work-container .work-box .work-box-text:hover {
   transform: scale(0.95);
@@ -759,6 +824,7 @@ article #about-cole .about-cole-text {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
 }
 @media (max-width: 768px) {
   #work-page h1 {
@@ -771,8 +837,9 @@ footer {
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #f3f3f3;
+  color: #333;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .contact-form {
   width: 95%;
@@ -875,6 +942,10 @@ footer {
   padding: auto;
 }
 
+#work-page h1 {
+  color: #333;
+}
+
 .work-done-pages {
   background-color: #f3f3f3;
 }
@@ -898,7 +969,7 @@ footer {
 }
 
 .tags {
-  border: solid 0.25rem #333;
+  border: solid 0.25rem #222;
   box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0);
   display: inline-block;
   width: auto;
@@ -974,12 +1045,18 @@ footer {
 }
 .buttons :hover {
   transform: scale(1.05);
+  transition: all 0.5s;
+  color: #4962f6;
+}
+.buttons :not(:hover) {
+  transform: scale(1);
+  transition: all 0.5s;
 }
 .buttons .button {
   padding: 0.5rem;
   width: 6rem;
   height: 2rem;
-  background-color: #333;
+  background-color: #222;
   border-radius: 1rem;
   margin-bottom: 2.5%;
 }
@@ -994,6 +1071,9 @@ footer {
   .resume-wrapper {
     background-color: #181818 !important;
     color: #f3f3f3;
+  }
+  .button {
+    background-color: #333 !important;
   }
   article,
   section,
@@ -1012,8 +1092,11 @@ footer {
     color: #f3f3f3 !important;
   }
   .button, .socials li {
-    background-color: #444 !important;
     color: #fff !important;
+  }
+  .socials li img {
+    filter: invert(100%) !important;
+    -webkit-filter: invert(100%) !important;
   }
   .work-box-text, .tags {
     background-color: #222 !important;
