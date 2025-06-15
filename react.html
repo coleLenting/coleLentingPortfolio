@@ -15,9 +15,9 @@
     <section>
         <div class="wrap-work">
             <div class="work-done-container">
-                <img src="./assets/FitJourney-1.png" />
-                <img src="./assets/FitJourney-add.png" />
-                <img src="./assets/FitJpurney-added-goal.png" />
+                <img src="./assets/FitJourney-1.png" onclick="openModal('react', 0)" />
+                <img src="./assets/FitJourney-add.png" onclick="openModal('react', 1)" />
+                <img src="./assets/FitJourney-added-goal.png" onclick="openModal('react', 2)" />
             </div>
             <div class="text-section">
                 <h1>03.</h1>
@@ -47,8 +47,21 @@
         </div>
     </section>
     
-        <!-- Javascript -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav modal-prev" onclick="previousImage(); event.stopPropagation();">&#8249;</button>
+        <button class="modal-nav modal-next" onclick="nextImage(); event.stopPropagation();">&#8250;</button>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt=""/>
+        </div>
+        <div class="modal-counter">
+            <span id="currentImageIndex">1</span> / <span id="totalImages">3</span>
+        </div>
+    </div>
+
+       <!-- Javascript -->
         <script src="./script/script.js"></script>
+        <script src="./script/modal.js"></script>
 
         <footer>
             <h1>Cole Charles Peter Lenting</h1>

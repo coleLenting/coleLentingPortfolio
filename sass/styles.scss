@@ -1088,16 +1088,15 @@ footer {
 }
 
 .tags{
-  border: solid 0.25rem #222;
-  box-shadow: 0.25rem 0.25rem 1px rgb(0, 0, 0); 
+  border: solid 0.15rem #222;
+  box-shadow: 0.15rem 0.15rem 1px rgb(0, 0, 0); 
   display: inline-block;
   width: auto;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   text-align: center;
-  margin: 0.5%;
+  margin: 0.25%;
 }
-
 
 .work-done-container{
   margin: 2.5%;
@@ -1123,7 +1122,6 @@ footer {
       transition: all 0.5s;
     }
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1337,7 +1335,7 @@ footer {
         }
 
         .modal-close:hover {
-            color: #007bff;
+            color: $primary;
         }
 
         @keyframes modalZoomIn {

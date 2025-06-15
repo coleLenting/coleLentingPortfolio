@@ -14,9 +14,9 @@
     <section>
         <div class="wrap-work">
             <div class="work-done-container">
-                <img src="./assets/app-design2.png" style="width: 90%; height: auto;"/>
-                <img src="./assets/app-design3.png" style="width: 90%; height: auto;"/>
-                <img src="./assets/App-Design-phone.png" style="width: 90%; height: auto;"/>
+                <img src="./assets/app-design2.png" onclick="openModal('app', 0)"/>
+                <img src="./assets/app-design3.png" onclick="openModal('app', 1)"/>
+                <img src="./assets/App-Design-phone.png" onclick="openModal('app', 2)"/>
             </div>
             <div class="text-section">
                 <h1>04.</h1>
@@ -44,8 +44,21 @@
         </div>
     </section>
     
-        <!-- Javascript -->
-        <script src="../script.js"></script>
+  <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav modal-prev" onclick="previousImage(); event.stopPropagation();">&#8249;</button>
+        <button class="modal-nav modal-next" onclick="nextImage(); event.stopPropagation();">&#8250;</button>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt=""/>
+        </div>
+        <div class="modal-counter">
+            <span id="currentImageIndex">1</span> / <span id="totalImages">3</span>
+        </div>
+    </div>
+
+       <!-- Javascript -->
+        <script src="./script/script.js"></script>
+        <script src="./script/modal.js"></script>
 
         <footer>
             <h1>Cole Charles Peter Lenting</h1>

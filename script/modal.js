@@ -4,12 +4,30 @@
                 { src: './assets/WoodWise-Home.png', alt: 'WoodWise Home' },
                 { src: './assets/Woodwise-service.png', alt: 'WoodWise Service' },
                 { src: './assets/Woodwise-gallery.png', alt: 'WoodWise Gallery' }
+            ],
+            'laravel': [
+                { src: './assets/Laravel-Blog.png', alt: 'Laravel Home' },
+                { src: './assets/Laravel-Login.png', alt: 'Laravel Login' },
+                { src: './assets/Laravel-user-setting.png', alt: 'Laravel User Setting' }
+            ],
+            'react': [
+                { src: './assets/FitJourney-1.png', alt: 'FitJourney App' },
+                { src: './assets/FitJourney-add.png', alt: 'FitJourney Add Goal' },
+                { src: './assets/FitJourney-added-goal.png', alt: 'FitJourney Goal Added' }
+            ],
+            'app': [
+                { src: './assets/app-design2.png', alt:'App Screen 1' },
+                { src: './assets/app-design2.png', alt: 'App Screen 2' },
+                { src: './assets/App-Design-phone.png', alt: 'App Screen 3' }
+            ],
+            'logo': [
+                { src: './assets/Logos.png', alt: 'Logos' }
+            ],
+            'youtube': [
+                { src: './assets/YouTube.png', alt: 'YouTube Home' },
+                { src: './assets/thumbnail2.png', alt: 'Thumbnail 1' },
+                { src: './assets/thumbnail4.png', alt: 'Thumbnail 2' }
             ]
-            // Add more galleries here like:
-            // 'project2': [
-            //     { src: './assets/project2-1.png', alt: 'Project 2 Image 1' },
-            //     { src: './assets/project2-2.png', alt: 'Project 2 Image 2' }
-            // ]
         };
 
         let currentGallery = null;
