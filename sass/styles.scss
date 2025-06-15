@@ -117,20 +117,16 @@ nav{
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a sticky effect */
     
-
         ul{
             display: flex;
             gap: 2rem;
             margin-right: 2.5%;
            
-            
             li{  
                 list-style: none;
                 font-size: 1.5rem;
                 font-weight: bold;
 
-                
-              
                 :hover{
                   color: lighten($primary,20%);
                 }
@@ -139,13 +135,10 @@ nav{
                     text-decoration: none; 
                     color: $primary;
                     font-weight: bold;
-                   
-    
                 }
             }
         }
     }
-
 
 @media (max-width: 768px) {
   nav{
@@ -710,8 +703,6 @@ article{
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   
-
-  
       .section-content,
       .section-list {
         font-size: 1.2em;
@@ -836,8 +827,6 @@ article{
                         transform: perspective(2000px) rotateX(var(--_a, 0deg));  
                         transition: 1s;
                       }
-
-                 
                 }
             }
 
@@ -851,13 +840,10 @@ article{
                 }
             }
 
-            
             .work-box-flex{
               display: flex;
               gap: 5%;
               
-              
-
               @media (max-width: 768px) {
                 display: flex;
                 flex-direction: column;
@@ -931,8 +917,6 @@ article{
           font-size: 2.5rem;
         }
     }
-
-
 }
 footer {
   display: flex;
@@ -952,7 +936,7 @@ footer {
 .contact-hero {
   background: linear-gradient(135deg, #4962f6 0%, #6b7bff 100%);
   color: white;
-  padding: 8rem 2rem 4rem;
+  padding: 4rem 1rem 2rem;
   text-align: center;
   margin-top: 0;
 
@@ -1504,8 +1488,6 @@ footer {
     color: #fff;
     font-weight: bold;
   }
-    
-
   }
 
 
