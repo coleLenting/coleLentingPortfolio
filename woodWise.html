@@ -14,9 +14,9 @@
     <section>
         <div class="wrap-work">
             <div class="work-done-container">
-                <img src="./assets/WoodWise-Home.png" onclick="openModal('./assets/WoodWise-Home.png')" alt="WoodWise Home"/>
-                <img src="./assets/Woodwise-service.png" onclick="openModal('./assets/Woodwise-service.png')" alt="WoodWise Service"/>
-                <img src="./assets/Woodwise-gallery.png" onclick="openModal('./assets/Woodwise-gallery.png')" alt="WoodWise Gallery"/>
+                <img src="./assets/WoodWise-Home.png" onclick="openModal('woodwise', 0)" alt="WoodWise Home"/>
+                <img src="./assets/Woodwise-service.png" onclick="openModal('woodwise', 1)" alt="WoodWise Service"/>
+                <img src="./assets/Woodwise-gallery.png" onclick="openModal('woodwise', 2)" alt="WoodWise Gallery"/>
             </div>
             <div class="text-section">
                 <h1>01.</h1>
@@ -49,10 +49,15 @@
         </div>
     </section>
 
-        <div id="imageModal" class="modal" onclick="closeModal()">
+  <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="modal-close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav modal-prev" onclick="previousImage(); event.stopPropagation();">&#8249;</button>
+        <button class="modal-nav modal-next" onclick="nextImage(); event.stopPropagation();">&#8250;</button>
         <div class="modal-content" onclick="event.stopPropagation()">
             <img id="modalImage" src="" alt=""/>
+        </div>
+        <div class="modal-counter">
+            <span id="currentImageIndex">1</span> / <span id="totalImages">3</span>
         </div>
     </div>
 

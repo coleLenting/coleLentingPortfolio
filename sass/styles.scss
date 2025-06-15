@@ -11,7 +11,7 @@ html{
     position: fixed;
     top: 0;
     width: 75%;
-    height: 10%;
+    height: 12.5%;
     border-radius: 25px;
     margin: 12.5%;
     margin-top: 0.5%;
@@ -1313,7 +1313,7 @@ footer {
             position: relative;
             max-width: 90%;
             max-height: 90%;
-            border-radius: 8px;
+            border-radius: 5px;
             overflow: hidden;
             animation: modalZoomIn 0.3s ease;
         }
@@ -1361,3 +1361,44 @@ footer {
             transform: scale(1.02);
         }
 
+.modal-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 1002;
+        }
+
+        /* Carousel Navigation */
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 15px 20px;
+            cursor: pointer;
+            border-radius: 25%;
+            transition: all 0.3s ease;
+            z-index: 1002;
+        }
+
+        .modal-nav:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-prev {
+            left: 10px;
+        }
+
+        .modal-next {
+            right: 10px;
+        }
