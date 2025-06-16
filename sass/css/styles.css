@@ -340,7 +340,7 @@ aside {
 @media (max-width: 768px) {
   .tiger {
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: cover;
     border-radius: 50px;
     box-shadow: none; /* Remove shadow on smaller screens */
@@ -355,7 +355,7 @@ aside {
 }
 @media (max-width: 768px) {
   .banner {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -376,6 +376,11 @@ aside {
   object-fit: cover;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 768px) {
+  .about-cole-image {
+    display: none;
+  }
 }
 .flex-about {
   display: flex;
@@ -675,7 +680,7 @@ article #about-cole .about-cole-text {
 }
 .resume-content .software-skills .skill .progress-bar .progress {
   height: 12px;
-  background-color: #4CAF50;
+  background-color: #4962f6;
   border-radius: 10px;
 }
 
@@ -842,9 +847,9 @@ footer {
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
 .contact-hero {
-  background: linear-gradient(135deg, #4962f6 0%, #6b7bff 100%);
+  background: linear-gradient(135deg, #4962f6 0%, #8893f7 100%);
   color: white;
-  padding: 4rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   text-align: center;
   margin-top: 0;
 }

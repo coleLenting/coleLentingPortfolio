@@ -380,7 +380,7 @@ aside {
   
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 75%;
     object-fit: cover;
     border-radius: 50px;
     box-shadow: none; /* Remove shadow on smaller screens */
@@ -394,7 +394,7 @@ aside {
   text-align: justify;
 
   @media(max-width: 768px){
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -414,6 +414,11 @@ aside {
   object-fit: cover;
   margin: 0;
   padding: 0;
+
+
+  @media(max-width: 768px){
+    display: none;
+  }
 
     img{
       
@@ -749,7 +754,7 @@ article{
   
           .progress {
             height: 12px;
-            background-color: #4CAF50;
+            background-color: $primary;
             border-radius: 10px;
           }
         }
@@ -934,9 +939,9 @@ footer {
 
 // CONTACT PAGE STYLES
 .contact-hero {
-  background: linear-gradient(135deg, #4962f6 0%, #6b7bff 100%);
+  background: linear-gradient(135deg, #4962f6 0%, #8893f7 100%);
   color: white;
-  padding: 4rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   text-align: center;
   margin-top: 0;
 
