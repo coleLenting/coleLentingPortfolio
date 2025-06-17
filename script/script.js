@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function toggleChatbot() {
+function toggleChatbot() {
   const popup = document.getElementById('chatbotPopup');
   popup.classList.toggle('active');
 }

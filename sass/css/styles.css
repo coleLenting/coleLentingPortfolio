@@ -1616,11 +1616,11 @@ footer {
   right: 10px;
 }
 
+/* Chatbot popup */
 .chatbot-button:hover {
   background: #1838f4;
 }
 
-/* Chatbot popup */
 .chatbot-popup {
   position: fixed;
   bottom: 90px;
@@ -1643,4 +1643,10 @@ footer {
   height: 100%;
   border: none;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .chatbot-popup, .chatbot-button, .chatbot-iframe {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

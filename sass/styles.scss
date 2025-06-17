@@ -1785,11 +1785,11 @@ footer {
             right: 10px;
         }
 
+/* Chatbot popup */
 .chatbot-button:hover {
   background: darken($primary, 10%);
 }
 
-/* Chatbot popup */
 .chatbot-popup {
   position: fixed;
   bottom: 90px;
@@ -1814,3 +1814,8 @@ footer {
   border-radius: 10px;
 }
 
+ @media (max-width: 768px) {
+            .chatbot-popup, .chatbot-button, .chatbot-iframe {
+                display: none;
+            }
+          }
