@@ -41,3 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(div);
     });
   });
+
+  function toggleChatbot() {
+  const popup = document.getElementById('chatbotPopup');
+  popup.classList.toggle('active');
+}
+
+// Close chatbot when clicking outside
+document.addEventListener('click', function(event) {
+  const popup = document.getElementById('chatbotPopup');
+  const button = document.querySelector('.chatbot-button');
+  
+  if (!popup.contains(event.target) && !button.contains(event.target)) {
+    popup.classList.remove('active');
+  }
+});
