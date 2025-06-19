@@ -49,6 +49,15 @@
         </div>
     </section>
 
+    <button class="chatbot-button" onclick="toggleChatbot()">
+  💬
+</button>
+
+<!-- Chatbot popup -->
+<div class="chatbot-popup" id="chatbotPopup">
+  <iframe class="chatbot-iframe" src="https://colelenting.github.io/chatBot/"></iframe>
+</div>
+
   <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="modal-close" onclick="closeModal()">&times;</span>
         <button class="modal-nav modal-prev" onclick="previousImage(); event.stopPropagation();">&#8249;</button>
