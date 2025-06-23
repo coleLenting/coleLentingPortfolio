@@ -80,6 +80,7 @@ class EmailService {
                 subject,
                 text,
                 html,
+                replyTo, 
                 attachments = []
             } = options;
 
@@ -89,6 +90,7 @@ class EmailService {
                 subject: subject,
                 text: text,        // Fallback for clients that don't support HTML
                 html: html,        // HTML content
+                replyTo: replyTo,
                 attachments: attachments
             };
 

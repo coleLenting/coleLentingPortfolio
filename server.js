@@ -86,6 +86,7 @@ app.post('/portfolio-contact', async (req, res) => {
         const emailToYou = {
             to: process.env.YOUR_EMAIL , 
             subject: `Portfolio Contact: ${sanitizedData.subject}`,
+            replyTo: sanitizedData.email,
             text: `
 New message from your portfolio contact form:
 
