@@ -22,7 +22,7 @@
     <section class="contact-main">
         <div class="contact-wrapper">
             <div class="contact-form-section">
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <h2>Send Me a Message</h2>
                     <div class="form-row">
                         <div class="input-group">
@@ -50,10 +50,13 @@
                         </label>
                         <textarea id="message" name="message" rows="6" placeholder="Your Message" draggable="false" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn" id="submitBtn">
                         <i class="fas fa-paper-plane"></i>
-                        Send Message
+                        <i class="fas fa-spinner loading"></i>
+                        <span class="btn-text">Send Message</span>
                     </button>
+                    
+                    <div class="message" id="messageDiv"></div>
                 </form>
             </div>
 
@@ -111,7 +114,7 @@
     <footer>
         <h1>Cole Charles Peter Lenting</h1>
     </footer>
-    
+    <script src="./script/contact-form.js"></script>
     <script src="./script/script.js"></script>
 </body>
 </html>
