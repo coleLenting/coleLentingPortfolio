@@ -204,7 +204,7 @@ header{
           margin-bottom: 0.25rem;
 
           @media (max-width: 768px) {
-            font-size: 1.25rem;
+            font-size: 1rem;
           }
         }
 
@@ -215,7 +215,7 @@ header{
           color: #4962f6;
 
             @media (max-width: 768px) {
-              font-size: 2.5rem;
+              font-size: 2rem;
           }
         }
 
@@ -224,7 +224,7 @@ header{
           color: #333333c0;
 
           @media (max-width: 768px) {
-            font-size: 10%;
+            font-size: 0.75rem;
           }
         }
 
@@ -233,7 +233,7 @@ header{
           color: #333333c0;
 
           @media (max-width: 768px) {
-            font-size: 1.25rem;
+            display: none;
           }
         }
 
@@ -242,6 +242,8 @@ header{
             padding: 0;
             height: 100vh;
             width: 35%;
+
+            
 
             img{
                 height: 100%;
@@ -340,7 +342,7 @@ aside {
   .one, .two {
     width: 20rem;
     height: 20rem; /* Adjust height for smaller screens */
-    margin: 1rem 0;
+    margin: 2.5%;
     object-fit: cover; /* Ensure it fits within small divs */
   }
 
@@ -363,7 +365,7 @@ aside {
   }
 
   .one, .two, .three {
-    width: 25rem;
+    width: 20rem;
     height: 7.5rem; /* Adjust height for smaller screens */
     margin: 1rem 0;
     object-fit: cover; /* Ensure it fits within small divs */
@@ -380,7 +382,8 @@ aside {
   border-radius: 50px;
   background-color: #fff;
   backdrop-filter: blur(10px);
-  box-shadow: 1rem 1rem 0.9rem rgb(237, 237, 237, 0.1);
+  box-shadow: 1rem 1rem 0.9rem rgb(237, 237, 237, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);;
 
   @media (prefers-color-scheme: dark) {
         background-color: rgba(30, 30, 30, 0.8) !important; /* Dark mode background */
@@ -388,7 +391,9 @@ aside {
       }
   
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
+    padding: 2.5%;
+    margin: 2.5% auto;
     height: 75%;
     object-fit: cover;
     border-radius: 50px;
@@ -578,7 +583,12 @@ article{
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+
+    @media (max-width: 768px) {
+            width: 90vw;
+      }
   }
+
 
     .resume-wrapper:hover{
       transform: scale(1.01);
@@ -647,10 +657,15 @@ article{
   
   // Flexed About Me and Profile Picture section
   .section-title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: $primary;
     margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+            font-size: 1rem;
+      }
   }
+
   .about-section {
     display: flex;
     justify-content: space-between;
@@ -679,6 +694,10 @@ article{
       .section-content {
         font-size: 1.2em;
         color: #555;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+      }
       }
     }
   
@@ -934,6 +953,7 @@ article{
 }
 footer {
   display: flex;
+  text-align: center;
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
@@ -941,9 +961,6 @@ footer {
   color: #333;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 
-  div {
-    
-  }
 }
 
 // CONTACT PAGE STYLES

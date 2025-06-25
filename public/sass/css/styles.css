@@ -178,7 +178,7 @@ header .hero .hey-class {
 }
 @media (max-width: 768px) {
   header .hero .hey-class {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 header .hero .name-class {
@@ -189,7 +189,7 @@ header .hero .name-class {
 }
 @media (max-width: 768px) {
   header .hero .name-class {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 header .hero .field-class {
@@ -198,7 +198,7 @@ header .hero .field-class {
 }
 @media (max-width: 768px) {
   header .hero .field-class {
-    font-size: 10%;
+    font-size: 0.75rem;
   }
 }
 header .hero .future-class {
@@ -207,7 +207,7 @@ header .hero .future-class {
 }
 @media (max-width: 768px) {
   header .hero .future-class {
-    font-size: 1.25rem;
+    display: none;
   }
 }
 header .hero .hero-img {
@@ -305,7 +305,7 @@ aside {
   .one, .two {
     width: 20rem;
     height: 20rem; /* Adjust height for smaller screens */
-    margin: 1rem 0;
+    margin: 2.5%;
     object-fit: cover; /* Ensure it fits within small divs */
   }
   .three {
@@ -323,7 +323,7 @@ aside {
     width: auto;
   }
   .one, .two, .three {
-    width: 25rem;
+    width: 20rem;
     height: 7.5rem; /* Adjust height for smaller screens */
     margin: 1rem 0;
     object-fit: cover; /* Ensure it fits within small divs */
@@ -338,7 +338,8 @@ aside {
   border-radius: 50px;
   background-color: #fff;
   backdrop-filter: blur(10px);
-  box-shadow: 1rem 1rem 0.9rem rgba(237, 237, 237, 0.1);
+  box-shadow: 1rem 1rem 0.9rem rgba(237, 237, 237, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 @media (prefers-color-scheme: dark) {
   .tiger {
@@ -348,7 +349,9 @@ aside {
 }
 @media (max-width: 768px) {
   .tiger {
-    width: 100%;
+    width: 90%;
+    padding: 2.5%;
+    margin: 2.5% auto;
     height: 75%;
     object-fit: cover;
     border-radius: 50px;
@@ -521,6 +524,11 @@ article #about-cole .about-cole-text {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 768px) {
+  .resume-wrapper {
+    width: 90vw;
+  }
+}
 
 .resume-wrapper:hover {
   transform: scale(1.01);
@@ -581,9 +589,14 @@ article #about-cole .about-cole-text {
 }
 
 .section-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #4962f6;
   margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1rem;
+  }
 }
 
 .about-section {
@@ -614,6 +627,11 @@ article #about-cole .about-cole-text {
 .about-section .about-me .section-content {
   font-size: 1.2em;
   color: #555;
+}
+@media (max-width: 768px) {
+  .about-section .about-me .section-content {
+    font-size: 1rem;
+  }
 }
 .about-section .profile-picture-section {
   flex: 0 0 180px;
@@ -848,6 +866,7 @@ article #about-cole .about-cole-text {
 
 footer {
   display: flex;
+  text-align: center;
   width: 100%;
   justify-content: space-around;
   padding: 2.5% 0;
@@ -855,6 +874,7 @@ footer {
   color: #333;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 .contact-hero {
   background: linear-gradient(135deg, #4962f6 0%, #8893f7 50%, #4962f6 100%);
   color: white;
