@@ -7,6 +7,8 @@ html{
 }
 
 
+
+
 .sticky {
     position: fixed;
     top: 0;
@@ -40,8 +42,15 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
-
+    animation: fadeIn 0.5s ease-in-out;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
 
 h1{
     font-family: 'Bauhaus 93', sans-serif;
@@ -939,7 +948,7 @@ footer {
 
 // CONTACT PAGE STYLES
 .contact-hero {
-  background: linear-gradient(135deg, #4962f6 0%, #8893f7 100%);
+  background: linear-gradient(135deg, #4962f6 0%, #8893f7 50%, $primary 100%);
   color: white;
   padding: 2rem 1rem 2rem;
   text-align: center;
