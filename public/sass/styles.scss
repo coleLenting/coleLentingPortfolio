@@ -1647,6 +1647,18 @@ footer {
     color: #f3f3f3 !important;
     border-color: #444 !important;
   }
+
+  .about-section,
+  .education,
+  .skills,
+  .software-skills,
+  .experience{
+
+     &:hover {
+          border-color: #4962f6 !important;
+          box-shadow: 0 0 0 3px rgba(73, 98, 246, 0.2) !important;
+        }
+  }
   .section-title,
   .section-content,
   .list-item,
@@ -1782,6 +1794,10 @@ footer {
 
 // Contact Form Styles
  .loading {
+            display: none;
+        }
+
+        .submit-btn .fa-spinner {
             display: none;
         }
 
