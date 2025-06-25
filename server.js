@@ -169,8 +169,8 @@ Thank you for reaching out through my portfolio! I've received your message abou
 
 I'll review your message and get back to you as soon as possible, usually within 24-48 hours.
 
-Best regards,
-[Your Name]
+Yours Truly,
+Cole Charles Peter Lenting
 
 ---
 This is an automated confirmation. Please don't reply to this email.
