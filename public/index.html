@@ -177,6 +177,107 @@
         </div>
             
 </section>
+
+
+    <section class="contact-hero" id="contact-page">
+        <div class="contact-hero-content">
+            <h1>Let's Work Together</h1>
+            <p>Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can collaborate to create something amazing.</p>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="contact-wrapper">
+            <div class="contact-form-section">
+                <form class="contact-form" id="contactForm">
+                    <h2>Send Me a Message</h2>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">
+                                <i class="fas fa-user icon"></i>
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">
+                                <i class="fas fa-envelope icon"></i>
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">
+                            <i class="fas fa-tag icon"></i>
+                        </label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">
+                            <i class="fas fa-comment icon"></i>
+                        </label>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message" draggable="false" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        <i class="fas fa-spinner loading"></i>
+                        <span class="btn-text">Send Message</span>
+                    </button>
+                    
+                    <div class="message" id="messageDiv"></div>
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <div class="contact-image-container">
+                    <img src="./assets/lain-code.jpg" alt="Cole Lenting" class="contact-image">
+                </div>
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>I'm always excited to work on new projects and collaborate with creative minds. Whether you have a specific project in mind or just want to chat about possibilities, feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone icon"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <a href="tel:+27813489356">+27 81 348 9356</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope icon"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:colelenting7@gmail.com">colelenting7@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Cape Town, South Africa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Me</h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/cole-lenting/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/coleLenting" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/colelenting/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <footer>
             <h1>Cole Charles Peter Lenting</h1>
@@ -185,5 +286,6 @@
     
     <!-- Javascript -->
     <script src="./script/script.js"></script>
+    <script src="./script/contact-form.js"></script>
 </body>
 </html>

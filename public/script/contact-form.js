@@ -126,7 +126,7 @@ Thank you for reaching out through my portfolio! I've received your message abou
 In the meantime, feel free to check out more of my work on my portfolio.
 
 Best regards,
-Your Name
+Cole Lenting
 
 ---
 This is an automated response. Please don't reply to this email.
@@ -141,7 +141,7 @@ This is an automated response. Please don't reply to this email.
     
     <p>In the meantime, feel free to check out more of my work on my portfolio.</p>
     
-    <p>Best regards,<br>Your Name</p>
+    <p>Best regards,<br>Cole Lenting</p>
     
     <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #666; font-size: 14px;">
         <p>This is an automated response. Please don't reply to this email.</p>
