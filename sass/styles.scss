@@ -52,11 +52,10 @@ button{
   border-radius: 15px;
   
 
-  a{
-    font-weight: bold;
-    font-family: 'Bricolage Grotesque';
-    text-decoration: none;
-    color: #fff;
+  &:hover{
+    background-color: lighten($primary, 10%);
+    transform: scale(1.05);
+    transition: background-color 0.3s ease;
   }
 }
 

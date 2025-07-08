@@ -49,11 +49,10 @@ button {
   padding: 0.75rem 1.5rem;
   border-radius: 15px;
 }
-button a {
-  font-weight: bold;
-  font-family: "Bricolage Grotesque";
-  text-decoration: none;
-  color: #fff;
+button:hover {
+  background-color: #7a8cf8;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease;
 }
 
 body {
