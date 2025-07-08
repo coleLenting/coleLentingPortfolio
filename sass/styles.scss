@@ -44,6 +44,21 @@ body {
 
   
 }
+button{
+  background-color: $primary;
+  color: #fff;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+  
+
+  a{
+    font-weight: bold;
+    font-family: 'Bricolage Grotesque';
+    text-decoration: none;
+    color: #fff;
+  }
+}
 
 body{
     background-color: #fff;
@@ -1682,11 +1697,11 @@ h1{
   width: 60px;
   height: 60px;
   background: $primary;
-  border: none;
-  border-radius: 50%;
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 5px 5px 0px rgba(0,0,0,1);
   z-index: 1000;
+  text-align: center;
 }
 
  /* Modal Styles */

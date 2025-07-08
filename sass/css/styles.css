@@ -42,6 +42,20 @@ body {
   }
 }
 
+button {
+  background-color: #4962f6;
+  color: #fff;
+  box-shadow: 5px 5px 0px rgb(0, 0, 0);
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+}
+button a {
+  font-weight: bold;
+  font-family: "Bricolage Grotesque";
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   background-color: #fff;
   margin: 0;
@@ -852,11 +866,16 @@ article #about-cole .about-cole-text {
 footer {
   display: flex;
   width: 100%;
-  justify-content: space-around;
   padding: 2.5% 0;
   background-color: #f3f3f3;
   color: #333;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  footer h1 {
+    text-align: center;
+    font-size: 1.25rem;
+  }
 }
 .contact-hero {
   background: linear-gradient(135deg, #4962f6 0%, #8893f7 100%);
@@ -1510,11 +1529,11 @@ footer {
   width: 60px;
   height: 60px;
   background: #4962f6;
-  border: none;
-  border-radius: 50%;
+  border-radius: 25px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 0px rgb(0, 0, 0);
   z-index: 1000;
+  text-align: center;
 }
 
 /* Modal Styles */
